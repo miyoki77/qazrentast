@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты — QazRentAst</title>
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/site.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>QazRentAst</span>
+      </a>
+      <nav class="menu">
+        <a data-nav href="index.html" data-i18n="nav_home" data-i18n="nav_home">Главная</a>
+        <a data-nav href="models.html" data-i18n="nav_models" data-i18n="nav_models">Модельный ряд</a>
+        <a data-nav href="booking.html" data-i18n="nav_booking" data-i18n="nav_booking">Бронь</a>
+        <a data-nav href="contacts.html" data-i18n="nav_contacts" data-i18n="nav_contacts">Контакты</a>
+        <a data-nav href="faq.html" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <div class="lang" aria-label="Language">
+        <select id="langSelect">
+          <option value="ru">RU</option>
+          <option value="kz">KZ</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  
+<main class="container">
+  <section class="section">
+    <h1 class="section-title" data-i18n="nav_contacts"><span data-i18n="contacts_title" data-i18n="nav_contacts">Контакты</span></h1>
+    <div class="grid" style="grid-template-columns:1.1fr .9fr;">
+      <div class="card card-pad">
+        <h3 style="margin-top:0">QazRentAst</h3>
+        <p>Адрес: Abu Dhabi Plaza, Astana, Kazakhstan</p>
+        <p>Телефон: <a href="tel:+77070707007">+7 707 070 7007</a></p>
+        <p>Почта: <a href="mailto:qazrentastana@gmail.com">qazrentastana@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/77070707007" target="_blank" rel="noopener">+7 707 070 7007</a></p>
+        <p><b data-i18n="hours">Режим работы</b>: <span data-i18n="hours_value">Круглосуточно, 24/7</span></p>
+        <p class="small" style="margin-top:10px;">Контакты примерные — замените на реальные.</p>
+        <div class="cta">
+          
+          
+        </div>
+      </div>
+      <div class="card" style="padding:10px">
+        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Abu%20Dhabi%20Plaza%20Astana&output=embed" title="QazRentAst location"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> QazRentAst — carsharing in Astana.
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </div>
+  </footer>
+</body>
+</html>

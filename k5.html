@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kia K5 — QazRentAst</title>
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/site.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>QazRentAst</span>
+      </a>
+      <nav class="menu">
+        <a data-nav href="index.html" data-i18n="nav_home" data-i18n="nav_home">Главная</a>
+        <a data-nav href="models.html" data-i18n="nav_models" data-i18n="nav_models">Модельный ряд</a>
+        <a data-nav href="booking.html" data-i18n="nav_booking" data-i18n="nav_booking">Бронь</a>
+        <a data-nav href="contacts.html" data-i18n="nav_contacts" data-i18n="nav_contacts">Контакты</a>
+        <a data-nav href="faq.html" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <div class="lang" aria-label="Language">
+        <select id="langSelect">
+          <option value="ru">RU</option>
+          <option value="kz">KZ</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  
+<main class="container">
+  <section class="section">
+    <div class="card" style="overflow:hidden">
+      <img class="car-img" style="height:320px" src="assets/img/k5.jpg" alt="Kia K5">
+      <div class="card-pad">
+        <h1 class="section-title" style="margin-top:0">Kia K5</h1>
+        <p class="h-sub">Седан со спортивным дизайном и хорошим уровнем комфорта.</p>
+        <div class="cta">
+          <a class="btn primary" data-i18n="book_this" href="booking.html" data-i18n="book_now">Забронировать</a>
+          <a class="btn" href="models.html" data-i18n="back_models">Назад к моделям</a>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" style="padding:0; overflow:hidden">
+          <table class="table">
+            <thead><tr><th colspan="2"><span data-i18n="specs"><span data-i18n="specs">Характеристики</span></span></th></tr></thead>
+            <tbody><tr><th style='width:32%'>Class</th><td>Sedan</td></tr>
+<tr><th style='width:32%'>Seats</th><td>5</td></tr>
+<tr><th style='width:32%'>Engine</th><td>2.5L (пример)</td></tr>
+<tr><th style='width:32%'>Transmission</th><td>Automatic</td></tr>
+<tr><th style='width:32%'>Drive</th><td>FWD</td></tr>
+<tr><th style='width:32%'>Fuel</th><td>Petrol</td></tr>
+<tr><th style='width:32%'>Features</th><td>LED optics, ассистенты движения (пример)</td></tr></tbody>
+          </table>
+        </div>
+        
+        
+        <div style="height:14px"></div>
+
+        <div style="height:14px"></div>
+        <h3 style="margin:0 0 10px"><span data-i18n="gallery"><span data-i18n="gallery">Галерея</span></span></h3>
+        <div class="slider" data-slider>
+          <div class="slider-main">
+            <button class="slider-btn prev" type="button" data-slider-prev aria-label="Prev">‹</button>
+            <img data-slider-main src="assets/img/k5_1.jpg" alt="k5 main">
+            <button class="slider-btn next" type="button" data-slider-next aria-label="Next">›</button>
+          </div>
+          <div class="slider-thumbs">
+          <img data-slider-thumb data-src="assets/img/k5_1.jpg" src="assets/img/k5_1.jpg" alt="k5 1"/>
+          <img data-slider-thumb data-src="assets/img/k5_2.jpg" src="assets/img/k5_2.jpg" alt="k5 2"/>
+          <img data-slider-thumb data-src="assets/img/k5_3.jpg" src="assets/img/k5_3.jpg" alt="k5 3"/>
+          <img data-slider-thumb data-src="assets/img/k5_4.jpg" src="assets/img/k5_4.jpg" alt="k5 4"/>
+          </div>
+        </div>
+
+<p class="small" style="margin-top:12px;"><span data-i18n="note_specs">Все характеристики сейчас примерные — позже можно заменить на точные.</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> QazRentAst — carsharing in Astana.
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </div>
+  </footer>
+  <script defer src="assets/js/slider.js"></script>
+  <script defer src="assets/js/inventory.js"></script>
+</body>
+</html>

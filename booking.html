@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Бронь — QazRentAst</title>
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/site.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>QazRentAst</span>
+      </a>
+      <nav class="menu">
+        <a data-nav href="index.html" data-i18n="nav_home" data-i18n="nav_home">Главная</a>
+        <a data-nav href="models.html" data-i18n="nav_models" data-i18n="nav_models">Модельный ряд</a>
+        <a data-nav href="booking.html" data-i18n="nav_booking" data-i18n="nav_booking">Бронь</a>
+        <a data-nav href="contacts.html" data-i18n="nav_contacts" data-i18n="nav_contacts">Контакты</a>
+        <a data-nav href="faq.html" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <div class="lang" aria-label="Language">
+        <select id="langSelect">
+          <option value="ru">RU</option>
+          <option value="kz">KZ</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  
+<main class="container">
+  <section class="section">
+    <h1 class="section-title"><span data-i18n="booking_title"><span data-i18n="booking_title">Бронь автомобиля</span></span></h1>
+    <div class="card card-pad">
+      <form id="bookingForm" class="form">
+        <div class="field">
+          <label for="car"><span data-i18n="form_car">Автомобиль *</span></label>
+          <select id="car" name="car" required>
+            <option value="" selected disabled>Выберите модель</option>
+            <option>Hyundai Sonata</option>
+            <option>Kia K5</option>
+            <option>Toyota Camry (XV80)</option>
+            <option>Mercedes-Benz S-Class (W223)</option>
+            <option>Lexus LX 700h</option>
+            <option>BMW 7 Series</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="name"><span data-i18n="form_name">Имя *</span></label>
+          <input id="name" name="name" placeholder="Например: Аян" required />
+        </div>
+        <div class="field">
+          <label for="phone"><span data-i18n="form_phone">Телефон *</span></label>
+          <input id="phone" name="phone" placeholder="+7 ..." required />
+        </div>
+        <div class="field">
+          <label for="start"><span data-i18n="form_start">Начало аренды *</span></label>
+          <input id="start" name="start" type="datetime-local" required />
+        </div>
+        <div class="field">
+          <label for="end"><span data-i18n="form_end">Окончание аренды *</span></label>
+          <input id="end" name="end" type="datetime-local" required />
+        </div>
+        <div class="field" style="grid-column:1/-1;">
+          <label for="note"><span data-i18n="form_note">Комментарий</span></label>
+          <textarea id="note" name="note" placeholder="Пожелания по подаче авто, детали и т.д."></textarea>
+        </div>
+        <div style="grid-column:1/-1; display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+          <button class="btn primary" type="submit" data-i18n="book_now">Забронировать</button>
+          <span id="formMsg" class="small"></span>
+        </div>
+      </form>
+    </div>
+
+    <div style="height:14px"></div>
+
+    <div class="card card-pad">
+      <h3 style="margin-top:0"><span data-i18n="my_bookings">Мои брони</span></h3>
+      <p id="emptyState" class="small"><span data-i18n="empty_bookings">Пока нет броней. Создайте бронь через форму выше — она сохранится в вашем браузере.</span></p>
+      <div style="overflow:auto">
+        <table class="table">
+          <thead>
+            <tr><th data-i18n="th_car">Авто</th><th data-i18n="th_start">Начало</th><th data-i18n="th_end">Конец</th><th data-i18n="th_name">Имя</th><th data-i18n="th_phone">Телефон</th><th data-i18n="th_actions">Действия</th></tr>
+          </thead>
+          <tbody id="bookingsBody"></tbody>
+        </table>
+      </div>
+      <p class="small" style="margin-top:10px;">Отмена работает кнопкой “Cancel”. Позже можно заменить текст на “Отменить”.</p>
+    </div>
+  </section>
+  <script defer src="assets/js/inventory.js"></script>
+  <script defer src="assets/js/booking.js"></script>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> QazRentAst — carsharing in Astana.
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </div>
+  </footer>
+</body>
+</html>

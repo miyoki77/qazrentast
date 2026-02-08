@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — QazRentAst</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <script defer src="assets/js/site.js"></script>
+  <script defer src="assets/js/i18n.js"></script>
+</head>
+<body>
+<header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span>QazRentAst</span>
+      </a>
+      <nav class="menu">
+        <a data-nav href="index.html" data-i18n="nav_home" data-i18n="nav_home">Главная</a>
+        <a data-nav href="models.html" data-i18n="nav_models" data-i18n="nav_models">Модельный ряд</a>
+        <a data-nav href="booking.html" data-i18n="nav_booking" data-i18n="nav_booking">Бронь</a>
+        <a data-nav href="contacts.html" data-i18n="nav_contacts" data-i18n="nav_contacts">Контакты</a>
+        <a data-nav href="faq.html" data-i18n="nav_faq">FAQ</a>
+      </nav>
+
+      <div class="lang" aria-label="Language">
+        <select id="langSelect">
+          <option value="ru">RU</option>
+          <option value="kz">KZ</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </header>
+<main class="container">
+  <h1 style="margin-top:28px"><span data-i18n="faq_title">FAQ</span></h1>
+  <p class="h-sub"><span data-i18n="faq_page_sub">Ответы на популярные вопросы по аренде и бронированию.</span></p>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr;">
+    <div class="card card-pad">
+      <h3 style="margin-top:0"><span data-i18n="faq1_q">Какие документы нужны?</span></h3>
+      <p><span data-i18n="faq1_a">Удостоверение личности и водительские права.</span></p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin-top:0"><span data-i18n="faq2_q">Можно ли отменить бронь?</span></h3>
+      <p><span data-i18n="faq2_a">Да, в разделе «Мои брони» нажмите «Отменить».</span></p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin-top:0"><span data-i18n="faq_docs_q">Можно ли без оригинала прав?</span></h3>
+      <p><span data-i18n="faq_docs_a">Нет, при получении авто нужен оригинал водительского удостоверения.</span></p>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin-top:0"><span data-i18n="faq_deposit_q">Есть ли депозит?</span></h3>
+      <p><span data-i18n="faq_deposit_a">Да, депозит 50 000 ₸. Возвращается после завершения аренды при соблюдении условий.</span></p>
+    </div>
+    <div class="card card-pad" style="grid-column:1/-1;">
+      <h3 style="margin-top:0"><span data-i18n="faq_outcity_q">Можно ли выехать за пределы города?</span></h3>
+      <p><span data-i18n="faq_outcity_a">Да, выезд за пределы города обсуждается индивидуально — свяжитесь с нами.</span></p>
+    </div>
+  </div>
+
+  <div class="notice" style="margin-top:14px">
+    <span data-i18n="faq_note">Не нашли ответ? Напишите нам в WhatsApp — поможем.</span>
+  </div>
+</main>
+<footer class="footer">
+    <div class="container">
+      © <span id="y"></span> QazRentAst — carsharing in Astana.
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </div>
+  </footer>
+</body>
+</html>
